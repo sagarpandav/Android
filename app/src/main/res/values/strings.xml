@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">NavigationDrawer</string>
+    <string name="drawer_open">Open Navigation Drawer</string>
+    <string name="drawer_close">Close Navigation Drawer</string>
+    <string-array name="drawerListItem">
+        <item>item 1</item>
+        <item>item 2</item>
+        <item>item 3</item>
+        <item>item 4</item>
+    </string-array>
+
+    <string-array name="description">
+        <item>This is Article one. This is Article one. This is Article one. This is Article one. This is Article one. This is Article one. This is Article one. This is Article one.</item>
+        <item>This is Article two. This is Article two. This is Article two. This is Article two. This is Article two. This is Article two. This is Article two. This is Article two.</item>
+        <item>This is Article three. This is Article three. This is Article three. This is Article three. This is Article three. This is Article three. This is Article three. </item>
+        <item>This is Article four. This is Article four. This is Article four. This is Article four. This is Article four. This is Article four. This is Article four. </item>
+    </string-array>
+
+
+</resources>
