@@ -2,6 +2,7 @@ package com.example.sagarpandav.navigationdrawer;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -44,6 +45,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        fragmentManager = getFragmentManager();
+        fragmentTransaction = fragmentManager.beginTransaction();
+        loginFragment = new LoginFragment();
+        fragmentTransaction.add(R.id.fragment_container, loginFragment, "loginFragment");
+        fragmentTransaction.commit();
+
     }
 
     @Override
@@ -82,12 +89,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         } else if (id == R.id.Map) {
 
-            Log.i("Log","mapFragent Created");
+            //Log.i("Log","mapFragent Created");
 
-            fragmentTransaction.replace(R.id.fragment_container, mapFragment, "mapFragment");
-            fragmentTransaction.addToBackStack(null);
+            //fragmentTransaction.replace(R.id.fragment_container, mapFragment, "mapFragment");
+            //fragmentTransaction.addToBackStack(null);
 
-            fragmentTransaction.commit();
+            //fragmentTransaction.commit();
+
+            Intent intent = new Intent(this, MapsActivity.class);
+            startActivity(intent);
 
 
         } else if (id == R.id.All) {

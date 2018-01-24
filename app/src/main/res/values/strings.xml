@@ -15,6 +15,7 @@
         <item>This is Article three. This is Article three. This is Article three. This is Article three. This is Article three. This is Article three. This is Article three. </item>
         <item>This is Article four. This is Article four. This is Article four. This is Article four. This is Article four. This is Article four. This is Article four. </item>
     </string-array>
+    <string name="title_activity_maps">Map</string>
 
 
 </resources>
