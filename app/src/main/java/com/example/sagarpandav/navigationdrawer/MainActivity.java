@@ -92,12 +92,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         } else if (id == R.id.All) {
 
-            //fragmentTransaction.replace(R.id.fragment_container, allFragment, "allFragment");
-           // fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.replace(R.id.fragment_container, allFragment, "allFragment");
+            fragmentTransaction.addToBackStack(null);
 
-            //fragmentTransaction.commit();
+            fragmentTransaction.commit();
 
-            //Log.i("Log","allFragment Created");
+            Log.i("Log","allFragment Created");
 
 
         } else if (id == R.id.Find) {
