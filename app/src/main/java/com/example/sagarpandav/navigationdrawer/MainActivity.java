@@ -18,7 +18,6 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
      private Toolbar toolbar;
-     private FragmentA f1;
      private LoginFragment loginFragment;
      private MapFragment mapFragment;
      private AllFragment allFragment;
@@ -47,8 +46,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         fragmentManager = getFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
-        loginFragment = new LoginFragment();
-        fragmentTransaction.add(R.id.fragment_container, loginFragment, "loginFragment");
+        HomeFragment homeFragment = new HomeFragment();
+        fragmentTransaction.add(R.id.fragment_container, homeFragment, "homeFragment");
+        fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
 
     }
@@ -71,13 +71,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         fragmentManager = getFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
-        f1 = new FragmentA();
         loginFragment = new LoginFragment();
         mapFragment = new MapFragment();
         allFragment = new AllFragment();
         findFragment = new FindFragment();
-
-        TextView textView = (TextView) findViewById(R.id.fragmentTextView);
 
         if (id == R.id.Login)
         {
