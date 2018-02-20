@@ -9,7 +9,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
+//import android.widget.SearchView;
+import android.support.v7.widget.SearchView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,10 +19,11 @@ import java.util.List;
  * Created by sagar.pandav on 23/01/18.
  */
 
-public class AllFragment extends Fragment {
+public class AllFragment extends Fragment implements SearchView.OnQueryTextListener {
 
 
     RecyclerView recyclerView;
+    SearchView searchView;
     private AllDataAdapter adapter;
 
     @Nullable
@@ -29,14 +31,17 @@ public class AllFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.all_fragment, container, false);
 
-        recyclerView =  (RecyclerView) view.findViewById(R.id.recyclerView);
+        recyclerView = view.findViewById(R.id.recyclerView);
 
         adapter = new AllDataAdapter(getActivity(),getData());
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(), new LinearLayoutManager(getActivity()).getOrientation());
-        recyclerView.addItemDecoration(dividerItemDecoration);
+//        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(), new LinearLayoutManager(getActivity()).getOrientation());
+//        recyclerView.addItemDecoration(dividerItemDecoration);
+
+        searchView = view.findViewById(R.id.searchViewAll);
+        searchView.setOnQueryTextListener(this);
 
         return view;
 
@@ -56,5 +61,17 @@ public class AllFragment extends Fragment {
         }
 
         return data;
+    }
+
+    @Override
+    public boolean onQueryTextSubmit(String s) {
+        searchView.clearFocus();
+        return true;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String s) {
+        adapter.getFilter().filter(s);
+        return true;
     }
 }

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/route_details_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Demo"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:textAlignment="center"/>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/station_1"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/route_details_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Station 1"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"/>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/station_2"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/station_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Station 2"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"/>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/station_3"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/station_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Station 3"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"/>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/station_4"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/station_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Station 4"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"/>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/station_5"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_below="@+id/station_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Station 5"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"/>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

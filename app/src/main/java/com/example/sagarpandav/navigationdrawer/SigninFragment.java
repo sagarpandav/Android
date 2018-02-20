@@ -12,39 +12,40 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 /**
- * Created by sagar.pandav on 23/01/18.
+ * Created by panda on 21-Feb-18.
  */
 
-public class LoginFragment extends Fragment {
+public class SigninFragment extends Fragment {
 
-
-    Button createNew;
-    FragmentManager fragmentManager;
-    FragmentTransaction fragmentTransaction;
+    private FragmentManager fragmentManager;
+    private FragmentTransaction fragmentTransaction;
+    Button login;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.login_fragment,container, false);
+        View view = inflater.inflate(R.layout.sign_in_fragment, container, false);
         return view;
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        super.onViewCreated(view, savedInstanceState);
         fragmentManager = getFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
 
-        createNew = view.findViewById(R.id.create_new_account);
-        createNew.setOnClickListener(new View.OnClickListener() {
+        login = view.findViewById(R.id.login_signin_fragment);
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Fragment fragment = new SigninFragment();
-                fragmentTransaction.replace(R.id.fragment_container, fragment  , "signinFragment");
+                Fragment fragment = new LoginFragment();
+                fragmentTransaction.replace(R.id.fragment_container, fragment  , "loginFragment");
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
 
-                Log.i("Log","signin Fragment Created");
+                Log.i("Log","login Fragment Created");
             }
         });
     }

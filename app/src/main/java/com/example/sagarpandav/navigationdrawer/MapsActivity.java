@@ -1,7 +1,5 @@
 package com.example.sagarpandav.navigationdrawer;
 
-import android.location.LocationListener;
-import android.location.LocationManager;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
@@ -40,10 +38,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        // Add a marker in Location to move the camera
-        LatLng india = new LatLng(23.0263892, 72.5076972);
-        mMap.addMarker(new MarkerOptions().position(india).title("You are here"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(india));
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(india, 12.0f));
+        // Add a marker in Sydney and move the camera
+        LatLng india = new LatLng(22.552573, 72.923813);
+        mMap.addMarker(new MarkerOptions().position(india).title("Marker in Sydney"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(india, 15f));
     }
 }

@@ -46,8 +46,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         fragmentManager = getFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
-        HomeFragment homeFragment = new HomeFragment();
-        fragmentTransaction.add(R.id.fragment_container, homeFragment, "homeFragment");
+        //HomeFragment homeFragment = new HomeFragment();
+        //FindFragment findFragment = new FindFragment();
+        LoginFragment loginFragment = new LoginFragment();
+        fragmentTransaction.add(R.id.fragment_container, loginFragment, "loginFragment");
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
 
@@ -97,7 +99,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             startActivity(intent);
 
 
-        } else if (id == R.id.All) {
+        } else if (id == R.id.All_Station) {
 
             fragmentTransaction.replace(R.id.fragment_container, allFragment, "allFragment");
             fragmentTransaction.addToBackStack(null);

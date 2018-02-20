@@ -11,8 +11,8 @@
             android:id="@+id/Map"
             android:title="Map" />
         <item
-            android:id="@+id/All"
-            android:title="All" />
+            android:id="@+id/All_Station"
+            android:title="All Station" />
         <item
             android:id="@+id/Find"
             android:title="Find" />

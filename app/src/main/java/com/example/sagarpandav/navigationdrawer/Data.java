@@ -7,5 +7,14 @@ package com.example.sagarpandav.navigationdrawer;
 public class Data {
 
     int iconId;
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
     String title;
 }
