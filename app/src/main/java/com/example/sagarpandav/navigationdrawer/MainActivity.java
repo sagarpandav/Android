@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
      private MapFragment mapFragment;
      private AllFragment allFragment;
      private FindFragment findFragment;
+     private FragmentQRView qrFragment;
      FragmentManager fragmentManager;
      FragmentTransaction fragmentTransaction;
      DrawerLayout drawer;
@@ -77,6 +78,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         mapFragment = new MapFragment();
         allFragment = new AllFragment();
         findFragment = new FindFragment();
+        qrFragment = new FragmentQRView();
 
         if (id == R.id.Login)
         {
@@ -118,6 +120,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             Log.i("Log","findFragment Created");
 
+        }else if (id == R.id.QR){
+
+            fragmentTransaction.replace(R.id.fragment_container, qrFragment, "qrFragment");
+            fragmentTransaction.addToBackStack(null);
+
+            fragmentTransaction.commit();
+
+            Log.e("Log", "Qr Fragment Created");
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
